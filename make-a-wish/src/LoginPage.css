@@ -1,0 +1,220 @@
+:root {
+  --pink: #ED0B70;
+  --purple: #482673;
+  --light-pink: #F6EBF4;
+}
+
+.page-container {
+  /* position: relative; */
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+/* .page-container img {
+  filter: brightness(0.9) contrast(0.9) saturate(0.8) hue-rotate(-30deg);
+} */
+.page-background {
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  filter: blur(10px);
+  /* adjust the blur amount as needed */
+  filter: blur(10px) brightness(1.2) contrast(0.9) saturate(0.5) hue-rotate(-20deg);
+  ;
+
+}
+
+
+.login-page {
+  filter: blur(0px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 450px;
+  background-color: var(--color-white);
+  border-radius: 20px;
+  position:relative;
+  box-shadow: 7px 8px 16px 4px var(--outset-shadow);
+}
+
+
+
+.login-page h1 {
+  font-family: 'Sansita', sans-serif;
+  color: var(--color-white);
+  margin: 0;
+  background-color: var(--pink);
+  width: 100%;
+  padding: 3vh 0;
+  display: flex;
+  justify-content: center;
+  border-radius: 20px 20px 0 0;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5vh;
+  width: 90%;
+  color: var(--purple);
+}
+
+label {
+  display: flex;
+  margin-bottom: 10px;
+  flex-direction: column;
+  width: 100%;
+  /* align-items: center;  */
+}
+
+p {
+  margin-bottom: 2px;
+  margin-top: 0px;
+}
+
+
+.login-register-button {
+  padding: 10px 20px;
+  background-color: var(--purple);
+  color: var(--color-white);
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  width: 100%;
+  font-family: 'Sansita', sans-serif;
+  /* box-shadow: 7px 8px 16px 4px var(--outset-shadow), inset -2px -1px 6px var(--inset-shadow-prp); */
+  
+}
+
+.register-suggestion {
+  margin-top: 20px;
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+
+}
+
+.forgot-password{
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+/* register form */
+
+
+.login-form input[type="text"],
+.login-form input[type="password"],
+.login-form input[type="email"]
+ {
+  padding: 10px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  width: 100%;
+  /* max-width: 300px; */
+  box-sizing: border-box;
+  color: var(--purple);
+background-color: var(--color-white);
+}
+
+.register-link {
+  color: #482673;
+  font-weight: bold;
+}
+
+.login-form a{
+  color: var(--purple)
+}
+
+.login-form a:hover{
+  color: var(--light-purple)
+}
+.login-result {
+  position: absolute;
+  top: 2%;
+  font-size: 13px;
+  color: var(--pink)
+}
+
+.label-register {
+  position: relative;
+  width: 100%;
+  /* margin-top: 15px */
+}
+
+.pos-relativ {
+  width: 100%;
+  margin-bottom: 15px;
+}
+.instructions {
+  font-size: 0.75rem;
+  border-radius: 0.5rem;
+  color: var(--purple);
+  padding: 0.25rem;
+  width: 100%;
+  font-weight: 400;
+}
+
+.instructions>svg {
+  margin-right: 0.25rem;
+}
+
+.offscreen {
+  display: none;
+}
+
+.hide {
+  display: none;
+}
+
+.valid {
+  color: limegreen;
+  position: absolute;
+  margin-left: 20px;
+  right: 0;
+  top: 25%;
+}
+
+.invalid {
+  color: red;
+  margin-left: 0.25rem;
+  position: absolute;
+  right: 0;
+  top: 25%;
+}
+
+.errmsg {
+  background-color: lightpink;
+  color: firebrick;
+  font-weight: bold;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.line {
+  display: inline-block;
+}
+
+.info-from{
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  color: var(--purple);
+  padding: 0.25rem;
+  width: 100%;
+  font-weight: 400;
+  position: absolute;
+  top:21%
+}
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+}

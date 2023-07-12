@@ -1,0 +1,110 @@
+:root {
+  --pink: #ED0B70;
+  --purple: #482673;
+  --light-pink: #F6EBF4;
+}
+.container-slider {
+    max-width: 35vw;
+    height: 30vw;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 2em;
+}
+  .slide {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0;
+    transition: opacity ease-in-out 0.4s;
+  }
+  .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .active-anim {
+    opacity: 1;
+  }
+
+  .slider-buttons{
+    margin-top: 3vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .btn-slide {
+    width: 60px;
+    height: 60px;
+    background: transparent;
+    border: none;
+    /* position: absolute; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .btn-slide img {
+    width: 25px;
+    height: 25px;
+    pointer-events: none;
+  }
+  .prev {
+    top: 50%;
+    left: 20px;
+    transform: translateY(-60%) rotate(180deg);
+    /* transform: rotate(180deg); */
+  }
+  .next {
+    top: 50%;
+    right: 20px;
+    transform: translateY(-60%);
+  }
+  .see-gallery{
+    margin-bottom: 71px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-size: 1vw;
+    letter-spacing: 1px;
+    border-width: 0;
+    background-color: var(--pink);
+    padding: 0.5vw 3vw 0.5vw 3vw;
+    color: var(--color-white);
+    border-radius: 2em;
+    box-shadow: 4px 6px 11px 0px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    
+  }
+  
+  .container-dots {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+  }
+
+  .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 3px solid #f1f1f1;
+    margin: 0 5px;
+    background: #f1f1f1;
+  }
+
+  .dot.active {
+    background: rgb(32, 32, 32);
+  }
+
+  @media only screen and (max-width: 768px) {
+    /* .container-slider {
+      margin: 100px 10px 0;
+    } */
+    .btn-slide img{
+      width: 15px;
+      height: 15px;
+    }
+  }
